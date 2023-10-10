@@ -1,5 +1,4 @@
 require 'faker'
-require_relative '../lib/brazilian_phone_number'
 
 User.destroy_all
 
