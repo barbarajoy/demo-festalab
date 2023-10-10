@@ -7,8 +7,20 @@
   justify-content: space-between;
 }
 
-.navbar > .button {
+.navbar .nav .btn-secondary {
   background-color: rgba(235, 86, 71, 1);
-  border-radius: 5px;
+  border-radius: 16px;
   color: white;
+  font-weight: bold;
+  padding: 7px 22px 5px 22px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  border: 2px solid rgba(235, 86, 71, 1);
+  cursor: pointer;
+
+  &:hover {
+    border-color: #f0857a;
+  }
+
 }
