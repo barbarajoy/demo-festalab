@@ -1,7 +1,27 @@
 @import "navbar";
 
+:root {
+  --lilac: #eeeafe;
+  --purple: #46155f;
+  --pink: #eb5647;
+  --light-pink: #f0857a;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+}
+
+.index-container {
+  background-color: var(--lilac);
+  margin-top: 24px;
+  padding: 24px;
+
+
 }

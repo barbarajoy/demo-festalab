@@ -3,7 +3,11 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    if params[:q].present?
+      @users = User.where("name LIKE :search OR email LIKE :search OR phone LIKE :search OR cpf LIKE :search", search: "%#{params[:q]}%")
+    else
+      @users = User.all
+    end
   end
 
   # GET /users/1 or /users/1.json

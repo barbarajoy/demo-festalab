@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgba(70, 15, 95, 1);
+  background-color: var(--purple);
   width: 100%;
   box-shadow: 10px 0 24px 2px #c2c4cc;
   color: white;
@@ -8,7 +8,7 @@
 }
 
 .navbar .nav .btn-secondary {
-  background-color: rgba(235, 86, 71, 1);
+  background-color: var(--pink);
   border-radius: 16px;
   color: white;
   font-weight: bold;
@@ -16,11 +16,11 @@
   vertical-align: middle;
   display: inline-block;
   position: relative;
-  border: 2px solid rgba(235, 86, 71, 1);
+  border: 2px solid var(--pink);
   cursor: pointer;
 
   &:hover {
-    border-color: #f0857a;
+    border-color: var(--light-pink);
   }
 
 }

@@ -1,6 +1,22 @@
+<%= render "shared/navbar" %>
+
+<div class="index-container">
+  <h1>Bem vindo!</h1>
+  <h4>Insira os dados na barra de pesquisa abaixo para procurar um user:</h2>
+    <%= form_tag(users_path, method: :get, class: "form-inline my-2 my-lg-0") do %>
+      <input class="form-control rounded-pill mr-sm-2"
+        type="search"
+        placeholder="Pesquisar"
+        aria-label="Search"
+        name="q">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
+    <% end %>
+</div>
+
+
 <p style="color: green"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 class="text-center">Todos os Users</h1>
 
 <div id="users">
   <% @users.each do |user| %>
