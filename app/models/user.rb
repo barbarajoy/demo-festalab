@@ -9,14 +9,11 @@ class User < ApplicationRecord
   private
 
   def format_phone_number
-    # Remova todos os caracteres não numéricos do número de telefone
     self.phone = phone.gsub(/\D/, '')
 
-    # Verifique se o número de telefone tem a quantidade de dígitos esperada
     if phone.length == 11
       self.phone = "(#{phone[0..1]}) #{phone[2..6]}-#{phone[7..10]}"
     else
-      # Lidar com outros formatos de telefone ou números inválidos, se necessário
       errors.add(:phone, "Formato de telefone inválido")
     end
   end

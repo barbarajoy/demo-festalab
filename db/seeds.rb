@@ -11,16 +11,15 @@ PHONES = [
 ]
 
 def create_fake_user
-  user = User.new(
+  user = User.create!(
     name: Faker::Name.name,
     email: Faker::Internet.unique.email,
     phone: PHONES.sample,
     cpf: Faker::IDNumber.brazilian_citizen_number(formatted: true)
   )
-  user.save
 end
 
-10.times do
+15.times do
   create_fake_user
 end
 

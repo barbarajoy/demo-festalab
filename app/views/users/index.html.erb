@@ -13,18 +13,23 @@
     <% end %>
 </div>
 
+<h1 class="text-center mt-3">All Users:</h1>
+
+<div class="col-10 mx-auto">
+  <div class="card-user-grid">
+    <% @users.each do |user| %>
+        <div class="card-user text-center">
+          <%= render user %>
+          <p>
+            <%= button_to "Show", user, method: :get, class: "btn button-purple" %>
+        </p>
+        </div>
+    <% end %>
+  </div>
+</div>
+
 
 <p style="color: green"><%= notice %></p>
 
-<h1 class="text-center">Todos os Users</h1>
-
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
-</div>
 
 <%= link_to "New user", new_user_path %>
