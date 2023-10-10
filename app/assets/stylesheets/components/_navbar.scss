@@ -1,0 +1,14 @@
+.navbar {
+  background-color: rgba(70, 15, 95, 1);
+  width: 100%;
+  box-shadow: 10px 0 24px 2px #c2c4cc;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar > .button {
+  background-color: rgba(235, 86, 71, 1);
+  border-radius: 5px;
+  color: white;
+}
