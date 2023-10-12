@@ -33,6 +33,10 @@ gem 'faker'
 
 gem 'font-awesome-sass'
 
+gem 'cloudinary'
+
+gem "dotenv-rails"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
