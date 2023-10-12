@@ -19,11 +19,12 @@
   <div class="card-user-grid">
     <% @users.each do |user| %>
         <div class="card-user text-center">
-          <%# <i class="fa-solid fa-user fa-2xl" style="color: #eb5647;"></i> %>
+        <div class="card-user-content">
           <%= render user %>
-          <p>
+        </div>
+          <div class="button-wrapper">
             <%= button_to "Show", user, method: :get, class: "btn button-purple" %>
-          </p>
+          </div>
         </div>
     <% end %>
   </div>

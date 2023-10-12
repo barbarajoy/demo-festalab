@@ -6,16 +6,23 @@
 }
 
 .card-user {
-  flex-grow: 1;
-  overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   padding: 24px;
+  height: 100%;
 }
 
 .user-card-title {
   color: var(--purple);
+}
+
+.card-user-content {
+  flex-grow: 1;
+}
+
+.button-wrapper {
+  margin-top: auto;
 }
