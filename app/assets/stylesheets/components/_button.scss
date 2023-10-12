@@ -1,5 +1,10 @@
 .card-user-grid .card-user .button-purple {
   background-color: var(--purple);
-  border-radius: 5px;
+  border-radius: 8px;
   color: white;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--light-purple);
+  }
 }

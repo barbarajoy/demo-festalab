@@ -1,24 +1,27 @@
 <%= render "shared/navbar" %>
 
 <div class="index-container">
-  <h1>Welcome!</h1>
-  <h4>Search your user below:</h2>
-    <%= form_tag(users_path, method: :get, class: "form-inline my-2 my-lg-0") do %>
-      <input class="form-control rounded-pill mr-sm-2"
+<h1>Welcome!</h1>
+<h4>Search your user below:</h2>
+  <div class="searchbar-wrapper">
+    <%= form_tag(users_path, method: :get, class: "form-inline my-2 my-lg-0 text-center") do %>
+      <input class="form-control rounded-pill mr-sm-2 no-outline"
         type="search"
         placeholder="Search"
         aria-label="Search"
         name="q">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button>
+      <button type="submit" style="background: none; border: none;" class="searchbar-button">
+        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #eb5647;"></i>
+    </button>
     <% end %>
+  </div>
 </div>
-
-<h1 class="text-center mt-3">All Users:</h1>
 
 <div class="col-10 mx-auto">
   <div class="card-user-grid">
     <% @users.each do |user| %>
         <div class="card-user text-center">
+          <%# <i class="fa-solid fa-user fa-2xl" style="color: #eb5647;"></i> %>
           <%= render user %>
           <p>
             <%= button_to "Show", user, method: :get, class: "btn button-purple" %>

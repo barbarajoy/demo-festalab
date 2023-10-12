@@ -1,0 +1,28 @@
+.searchbar-wrapper {
+  position: relative;
+  margin-left: 24px;
+  margin: 10px auto;
+  width: 40%;
+}
+
+.searchbar-button {
+  position: absolute;
+  right: 3%;
+  top: 6px;
+}
+
+h1, h4 {
+  margin-left: 24px;
+  padding: 6px;
+}
+
+.no-outline {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.no-outline::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
