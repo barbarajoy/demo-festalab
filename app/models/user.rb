@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  before_validation :format_phone_number
+  before_validation :format_phone_number, :format_cpf
+  before_save :format_name
 
   validates :name, presence: true
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Invalid email format" }
@@ -14,7 +15,21 @@ class User < ApplicationRecord
     if phone.length == 11
       self.phone = "(#{phone[0..1]}) #{phone[2..6]}-#{phone[7..10]}"
     else
-      errors.add(:phone, "Formato de telefone inválido")
+      errors.add(:phone, "Invalid phone format")
     end
+  end
+
+  def format_cpf
+    self.cpf = cpf.gsub(/\D/, '')
+
+    if cpf.length == 11
+      self.cpf = "#{cpf[0..2]}.#{cpf[3..5]}.#{cpf[6..8]}-#{cpf[9..10]}"
+    else
+      errors.add(:cpf, "Invalid CPF format")
+    end
+  end
+
+  def format_name
+    self.name = name.split.map(&:capitalize).join(' ')
   end
 end
