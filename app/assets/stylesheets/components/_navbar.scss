@@ -7,24 +7,6 @@
   justify-content: space-between;
 }
 
-.navbar .nav .btn-secondary {
-  background-color: var(--pink);
-  border-radius: 16px;
-  color: white;
-  font-weight: bold;
-  padding: 7px 22px 5px 22px;
-  vertical-align: middle;
-  display: inline-block;
-  position: relative;
-  border: 2px solid var(--pink);
-  cursor: pointer;
-
-  &:hover {
-    border-color: var(--light-pink);
-  }
-
-}
-
 .navbar-icon {
-  width: 60%;
+  width: 70%;
 }

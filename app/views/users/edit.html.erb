@@ -1,10 +1,16 @@
+<div class="form-container">
+
 <h1>Editing user</h1>
 
 <%= render "form", user: @user %>
 
 <br>
 
-<div>
-  <%= link_to "Show this user", @user %> |
-  <%= link_to "Back to users", users_path %>
+</div>
+
+<div class="text-center m-3">
+  <i class="fa-solid fa-eye" style="color: #f0857a;"></i>
+    <%= link_to "Show this user", @user %> |
+  <i class="fa-solid fa-rotate-left" style="color: #f0857a;"></i>
+    <%= link_to "Back to users", users_path %>
 </div>

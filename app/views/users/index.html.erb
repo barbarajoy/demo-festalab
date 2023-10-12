@@ -1,20 +1,18 @@
-<%= render "shared/navbar" %>
-
 <div class="index-container">
-<h1>Welcome!</h1>
-<h4>Search your user below:</h2>
-  <div class="searchbar-wrapper">
-    <%= form_tag(users_path, method: :get, class: "form-inline my-2 my-lg-0 text-center") do %>
-      <input class="form-control rounded-pill mr-sm-2 no-outline"
-        type="search"
-        placeholder="Search"
-        aria-label="Search"
-        name="q">
-      <button type="submit" style="background: none; border: none;" class="searchbar-button">
-        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #eb5647;"></i>
-    </button>
-    <% end %>
-  </div>
+  <h1>Welcome!</h1>
+  <h4>Search your user below:</h2>
+    <div class="searchbar-wrapper">
+      <%= form_tag(users_path, method: :get, class: "form-inline my-2 my-lg-0 text-center") do %>
+        <input class="form-control rounded-pill mr-sm-2 no-outline"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          name="q">
+          <button type="submit" style="background: none; border: none;" class="searchbar-button">
+            <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #eb5647;"></i>
+          </button>
+      <% end %>
+    </div>
 </div>
 
 <div class="col-10 mx-auto">
@@ -25,7 +23,7 @@
           <%= render user %>
           <p>
             <%= button_to "Show", user, method: :get, class: "btn button-purple" %>
-        </p>
+          </p>
         </div>
     <% end %>
   </div>
@@ -33,6 +31,3 @@
 
 
 <p style="color: green"><%= notice %></p>
-
-
-<%= link_to "New user", new_user_path %>

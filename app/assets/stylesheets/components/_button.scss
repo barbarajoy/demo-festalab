@@ -8,3 +8,32 @@
     background-color: var(--light-purple);
   }
 }
+
+.button-purple {
+  background-color: var(--purple);
+  border-radius: 16px;
+  border: none;
+  padding: 8px;
+  color: white;
+
+  &:hover {
+    background-color: var(--light-purple);
+  }
+}
+
+.navbar .nav .btn-secondary {
+  background-color: var(--pink);
+  border-radius: 16px;
+  color: white;
+  padding: 8px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  border: 2px solid var(--pink);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--light-pink);
+  }
+
+}

@@ -9,3 +9,14 @@ h1, h6 {
 h4 {
   color: var(--pink);
 }
+
+a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--light-purple);
+  }
+
+}

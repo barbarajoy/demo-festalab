@@ -1,0 +1,13 @@
+.form-container {
+  background-color: var(--lilac);
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-form {
+  margin: 12px 12px;
+  color: var(--purple);
+}
