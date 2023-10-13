@@ -4,8 +4,8 @@ class User < ApplicationRecord
 
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Invalid email format" }
-  validates :phone, presence: true, format: { with: /\A\(\d{2}\) \d{5}-\d{4}\z/, message: "Invalid phone format" }, allow_blank: true
-  validates :cpf, uniqueness: true, format: { with: /\A\d{3}\.\d{3}\.\d{3}-\d{2}\z/, message: "Invalid CPF format" }, allow_blank: true
+  validates :phone, presence: true, format: { with: /\A\(\d{2}\) \d{5}-\d{4}\z/, message: "Invalid phone format" }
+  validates :cpf, presence: true, uniqueness: true, format: { with: /\A\d{3}\.\d{3}\.\d{3}-\d{2}\z/, message: "Invalid CPF format" }
   has_one_attached :photo
 
   private
