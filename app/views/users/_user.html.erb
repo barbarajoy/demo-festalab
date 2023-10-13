@@ -1,4 +1,11 @@
 <div id="<%= dom_id user %>">
+
+  <% if user.photo.attached? %>
+      <%= cl_image_tag user.photo.key, class: "image-user" %>
+    <% else %>
+      <%= image_tag user.image, class: "image-user" %>
+    <% end %>
+
   <p>
     <strong class="user-card-title">Name:</strong>
     <%= user.name %>

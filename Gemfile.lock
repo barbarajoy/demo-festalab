@@ -170,6 +170,10 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
+    open-uri (0.3.0)
+      stringio
+      time
+      uri
     pg (1.5.4)
     popper_js (2.11.8)
     psych (5.1.0)
@@ -253,6 +257,8 @@ GEM
     stringio (3.0.8)
     thor (1.2.2)
     tilt (2.3.0)
+    time (0.2.2)
+      date
     timeout (0.4.0)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
@@ -263,6 +269,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.8.2)
+    uri (0.12.2)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -291,6 +298,7 @@ DEPENDENCIES
   font-awesome-sass
   importmap-rails
   jbuilder
+  open-uri
   pg
   puma (>= 5.0)
   rails (~> 7.1.0)

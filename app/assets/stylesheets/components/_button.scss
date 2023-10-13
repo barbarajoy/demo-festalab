@@ -35,5 +35,34 @@
   &:hover {
     border-color: var(--light-pink);
   }
+}
 
+.navbar .nav .btn-secondary:active {
+  background-color: var(--very-light-pink);
+}
+
+.custom-file-label {
+  background-color: var(--pink);
+  color: #fff;
+  border-radius: 16px;
+  padding: 10px 20px;
+  border: 2px solid var(--pink);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--light-pink);
+  }
+}
+
+#custom-upload-button {
+  display: none;
+}
+
+
+.custom-file-label i {
+  margin-right: 5px;
+}
+
+#custom-upload-button[type="file"] {
+  display: none;
 }
